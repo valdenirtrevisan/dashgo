@@ -23,7 +23,7 @@ const schema = yup.object().shape({
 })
 
 export default function UserCreate() {
-  const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm({ resolver: yupResolver(schema) })
+  const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<CreateUserFormData>({ resolver: yupResolver(schema) })
 
   const handleCreateUser: SubmitHandler<CreateUserFormData> = async (values) => {
     await new Promise(resolve => setTimeout(resolve, 2000))
@@ -32,16 +32,16 @@ export default function UserCreate() {
 
   return (
     <Box>
-      <Header />
+       <Header />
 
       <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
         <SideBar />
 
-        <Box
-          as="form"
-          flex="1"
-          borderRadius={8}
-          bg="gray.800"
+        <Box 
+          as="form" 
+          flex="1" 
+          borderRadius={8} 
+          bg="gray.800" 
           p={["6", "8"]}
           onSubmit={handleSubmit(handleCreateUser)}
         >
@@ -50,33 +50,34 @@ export default function UserCreate() {
 
           <Stack>
             <SimpleGrid minChildWidth="240px" spacing={["6", "8"]} w="100%">
-              <Input
-                name="name"
-                label="Nome completo"
+              <Input 
+                name="name" 
+                label="Nome completo" 
+                type="text"
                 error={errors.name}
                 {...register('name')}
               />
-              <Input
-                name="emtail"
+              <Input 
+                name="email" 
                 type="email"
-                label="E-mail"
+                label="E-mail" 
                 error={errors.email}
                 {...register('email')}
               />
             </SimpleGrid>
 
             <SimpleGrid minChildWidth="240px" spacing={["6", "8"]} w="100%">
-              <Input
-                name="password"
+              <Input 
+                name="password" 
                 type="password"
-                label="Senha"
+                label="Senha" 
                 error={errors.password}
                 {...register('password')}
               />
-              <Input
-                name="passowrd_confirmation"
+              <Input 
+                name="password_confirmation" 
                 type="password"
-                label="Confirmação de senha"
+                label="Confirmação de senha" 
                 error={errors.password_confirmation}
                 {...register('password_confirmation')}
               />
