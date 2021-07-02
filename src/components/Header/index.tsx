@@ -1,14 +1,13 @@
-import { Flex, IconButton, Icon, useBreakpointValue } from '@chakra-ui/react'
+import { Flex, IconButton, Icon, useBreakpointValue } from '@chakra-ui/react';
 
-import Profile from './Profile'
-import NotificationsNav from './NotificationsNav'
-import SearchBox from './SearchBox'
-import Logo from './Logo'
-import { useSidebarDrawer } from '../../contexts/SidebarDrawerContext'
-import { RiMenuLine } from 'react-icons/ri'
+import { RiMenuLine } from 'react-icons/ri';
+import Profile from './Profile';
+import NotificationsNav from './NotificationsNav';
+import SearchBox from './SearchBox';
+import Logo from './Logo';
+import { useSidebarDrawer } from '../../contexts/SidebarDrawerContext';
 
-
-export default function Header() {
+export default function Header(): JSX.Element {
   const isWideVersion = useBreakpointValue({ base: false, lg: true });
   const { onOpen } = useSidebarDrawer();
 
@@ -23,14 +22,16 @@ export default function Header() {
       px="6"
       align="center"
     >
-      {!isWideVersion &&
+      {!isWideVersion && (
         <IconButton
           aria-label="Open navigation"
           icon={<Icon as={RiMenuLine} />}
           fontSize="24"
           variant="unstyled"
           onClick={onOpen}
-          mr="2" />}
+          mr="2"
+        />
+      )}
 
       <Logo />
 
