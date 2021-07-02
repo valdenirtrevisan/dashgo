@@ -11,7 +11,7 @@
   <img width='100%' src=".github/dashboard_desktop.png" />
 </p>
 
-<p align="justify" style="font-size: 16px">Dashboard genérico e responsivo em construção 🚧</p>
+<p align="justify" style="font-size: 16px">Dashboard responsivo 🚧</p>
 
 <h2>💻 Tecnologias:</h2>
 
@@ -24,6 +24,9 @@
 - <a href="https://react-query.tanstack.com"> React Query </a>
 - <a href="https://miragejs.com"> Mirage JS </a>
 - <a href="https://github.com/marak/Faker.js/"> Faker </a>
+- <a href="https://eslint.org/"> Eslint </a>
+- <a href="https://prettier.io/"> Prettier </a>
+
 
 <h2>📝 Licença:</h2>
 
@@ -33,4 +36,4 @@
 </br>
 </br>
 
-<p style="font-size: 16px; color: #fff;">Desenvolvido com ❤️ por <a href="https://github.com/valdenirtrevisan" style=" font-size: 16px;" >Valdenir Trevisan Junior</a>
+<p align="center" style="font-size: 16px; color: #fff;">Desenvolvido com ❤️ por <a href="https://github.com/valdenirtrevisan" style=" font-size: 16px;" >Valdenir Trevisan Junior</a>
